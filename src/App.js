@@ -9,6 +9,7 @@ export default () => {
   // mostar a lista na tela
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
+  const [balckHeader, setBlackHeader] = useState(true);
 
   // qnd a tela for carregada ele vai usar a funcao q eu digitar aqui 
   useEffect(() => {
@@ -26,9 +27,24 @@ export default () => {
 
     loadAll();
   }, []);
+
+  useEffect(()=>{
+    const scrollListener = () => {
+      if(window.scrollY > 10) {
+        setBlackHeader(true);
+      }else{
+        setBlackHeader(false);
+      }
+    }
+    window.addEventListener('scroll', scrollListener);
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+
   return (
     <div className="page">
-      <Header/>
+      <Header black={balckHeader}/>
       {featuredData &&
         <FeaturedMovie item={featuredData} />
       }
