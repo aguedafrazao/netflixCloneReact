@@ -28,11 +28,11 @@ export default () => {
     loadAll();
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     const scrollListener = () => {
-      if(window.scrollY > 10) {
+      if (window.scrollY > 10) {
         setBlackHeader(true);
-      }else{
+      } else {
         setBlackHeader(false);
       }
     }
@@ -44,15 +44,20 @@ export default () => {
 
   return (
     <div className="page">
-      <Header black={balckHeader}/>
+      <Header black={balckHeader} />
       {featuredData &&
         <FeaturedMovie item={featuredData} />
       }
       <section className="lists">
         {movieList.map((item, key) => (
-          <MovieRow key={key} title={item.title} items={item.items}/>
+          <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+      <footer>
+        Made live (https://www.youtube.com/watch?v=tBweoUiMsDg) to study react JS<br/>
+        All image rights are held by Netflix.<br/>
+        This product uses the TMDb API but is not endorsed or certified by TMDb.
+      </footer>
     </div>
   )
 }
