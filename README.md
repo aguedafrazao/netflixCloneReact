@@ -1,4 +1,5 @@
-# Netflix Clone using React JS </br>
+# Netflix Clone  </br>
+A Netflix clone using React JS </br>
 ### The entire project was made for study purposes
 
 
