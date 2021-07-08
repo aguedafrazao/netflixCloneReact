@@ -18,11 +18,11 @@ header{
 .header--logo{
     height: 30px;
 }
-.header--user{
-    height: 30px;
-}
 .header--logo img{
     height: 100%;
+}
+.header--user{
+    height: 30px;
 }
 .header--user img{
     height: 100%;

@@ -32,7 +32,7 @@ export default () => {
     const scrollListener = () => {
       if (window.scrollY > 10) {
         setBlackHeader(true);
-      } else {
+      }else {
         setBlackHeader(false);
       }
     }

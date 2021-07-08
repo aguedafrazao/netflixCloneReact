@@ -7,7 +7,6 @@ const basicFetch = async (endpoint) => {
     return json
 }
 
-
 export default {
     getHomeList: async () => {
         return [
@@ -69,6 +68,5 @@ export default {
             }
         }
         return info;
-
     }
 }
