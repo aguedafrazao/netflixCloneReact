@@ -54,10 +54,15 @@ export default () => {
         ))}
       </section>
       <footer>
-        Made live (https://www.youtube.com/watch?v=tBweoUiMsDg) to study react JS<br/>
-        All image rights are held by Netflix.<br/>
+        Made live (https://www.youtube.com/watch?v=tBweoUiMsDg) to study react JS<br />
+        All image rights are held by Netflix.<br />
         This product uses the TMDb API but is not endorsed or certified by TMDb.
       </footer>
+      {movieList.length <= 0 &&
+        <div className="loading">
+          <img src="https://cdn.lowgif.com/small/0534e2a412eeb281-the-counterintuitive-tech-behind-netflix-s-worldwide.gif" alt="Carregando" />
+        </div>
+      }
     </div>
   )
 }
